@@ -1,24 +1,24 @@
 <div class="col-md-6-offset-md-3">
-    <h2>Create Intern</h2>
+    <h2 class="text-center">Create Intern</h2>
     <form (ngSubmit) = "onSubmit()">
-            <div class="form-group">
+            <div class="form-group" class="text-center">
                 <label>Name</label>
                 <input type="text" class="form-group form-group-lg" id="name"
                 [(ngModel)] = "employee.name" name="name">
             </div>
 
-        <div class="form-group">
+        <div class="form-group" class="text-center">
             <label>Email</label>
             <input type="text" class="form-group form-group-lg" id="email"
             [(ngModel)] ="employee.email" name="email">
         </div>
 
-        <div class="form-group">
+        <div class="form-group" class="text-center">
             <label>Phone</label>
             <input type="tel" class="form-group form-group-lg" id="phone"
             [(ngModel)]="employee.phone" name="phone">
         </div>
 
-        <button class="btn btn-success" type="submit">Submit</button>
+        <button class="btn btn-success" style="margin-left:740px;" type="submit" >Submit</button>
     </form>
 </div>
