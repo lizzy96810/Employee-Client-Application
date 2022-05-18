@@ -1,0 +1,23 @@
+
+public class CodingChalleng {
+
+	public static void main(String[] args) {
+		fibinacci();
+
+	}
+	
+	private static void fibinacci() {
+		// 1,1,2,3,5,8,13
+		
+		int[] fib = new int [10];
+		for(int i = 0; i < fib.length; ++i) {
+			 if(fib[i]<2) {
+				 fib[i] = 1;
+			 }else {
+				fib [i] = fib[i-2] + fib[i-1];
+			 }
+		  System.out.println(fib[i]);
+		}
+	}
+
+}

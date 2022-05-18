@@ -1,5 +1,5 @@
 <div class="col-md-6-offset-md-3">
-    <h2 class="text-center">Create updateEmployee</h2>
+    <h2 class="text-center">Create Employee</h2>
     <form (ngSubmit) = "onSubmit()">
             <div class="form-group" class="text-center">
                 <label>Name</label>
@@ -18,7 +18,15 @@
             <input type="tel" class="form-group form-group-lg" id="phone"
             [(ngModel)]="employee.phone" name="phone">
         </div>
-
+    <div class="form-group" class="text-center">
+        <label>Department</label>
+        <select (change) = "selectChangeHandler($event)" style="margin-left:0px;">
+            <option>--select--</option>
+            <option  [value] = "department.id" *ngFor="let department of departments">
+                {{department.name}}
+            </option>
+        </select>
+    </div>
         <button class="btn btn-success" style="margin-left:740px;" type="submit" >Submit</button>
     </form>
 </div>

@@ -1,5 +1,9 @@
 <h2 class="text-center">Employee List</h2>
 <div class="container">
+<select (change) = "changeEventHandler($event)">
+    <option>--Choose a department--</option>
+    <option [value] ="department.id" *ngFor = "let department of departments">{{department.dptName}}</option>
+</select>
 <table class="table table-stripped">
     <thead>
         <tr>
@@ -7,8 +11,7 @@
             <th class="text-center">Employee Name</th>
             <th class="text-center">Email Id</th>
             <th class="text-center">Phone Number</th>
-           
-            
+            <th class="text-center">Department</th>
         </tr>
     </thead>
 
@@ -18,11 +21,10 @@
             <td class="text-center">{{employee.name}}</td>
             <td class="text-center">{{employee.email}}</td>
             <td class="text-center">{{employee.phone}}</td>
-         
-
+            <td class="text-center">{{employee.deptName}}</td>
             <td>
                 <button (click)="updateEmployee(employee.id)" class="btn btn-success" >Update</button>
-                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10">Delete</button>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
             </td>
        
         </tr>

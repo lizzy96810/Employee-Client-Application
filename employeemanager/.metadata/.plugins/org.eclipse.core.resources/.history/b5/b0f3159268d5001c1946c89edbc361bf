@@ -1,0 +1,21 @@
+
+public class CodingChallengeExample {
+
+	public static void main(String[] args) {
+		String name = "Malayalam";
+		boolean palindrome = isPalindromeExample(name);
+		System.out.println(palindrome);
+	}
+    
+	private static boolean isPalindromeExample(String name) {
+		System.out.println("========Is Palindrome Example========");
+		String output = null;
+		StringBuffer sb = new StringBuffer();
+		for(int i= name.length()-1; i>-1; --i) {
+			sb.append(name.charAt(i));
+		}
+
+		output = sb.toString();
+		return (name.equalsIgnoreCase(output));
+	}
+}

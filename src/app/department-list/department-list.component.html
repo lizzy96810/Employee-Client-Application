@@ -1,0 +1,28 @@
+<h2 class="text-center">Department List</h2>
+<div class="container">
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th class="text-center">Id</th>
+            <th class="text-center">Department Name</th>
+            
+           
+            
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let department of departments">
+            <td class="text-center">{{department.id}}</td>
+            <td class="text-center">{{department.dptName}}</td>
+            
+            <td>
+                <button (click)="updateEmployee(employee.id)" class="btn btn-success" >Update</button>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="margin-left:10px">Delete</button>
+            </td>
+
+           
+        </tr>
+    </tbody>
+</table>
+</div>

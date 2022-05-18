@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class CodingChallengPrep {
+
+	public static void main(String[] args) {
+		fibbanci();
+		String name="Malayalam";
+		boolean test = isPalindrome(name);
+		System.out.println(test);
+        //Example of arrayList
+		List<String> listOfNames =  names();
+		System.out.println(listOfNames.toString());
+	}
+	
+	private static void fibbanci() {
+		int[] fib = new int[10];
+		for(int i = 0; i< fib.length; ++ i) {
+			if(i <2) {
+				fib[i] = 1;
+			} else {
+				fib [i] = fib[i-2] + fib [i-1];
+			}
+			System.out.println(fib[i]);
+		}
+	}
+	
+	private static boolean isPalindrome (String name) {
+		StringBuffer sb = new StringBuffer();
+		for(int i = name.length()-1 ; i>-1; --i) {
+			sb.append(name.charAt(i));
+		}
+		String result = sb.toString();
+		boolean answer = name.equalsIgnoreCase(result);
+		return answer;
+	}
+	
+    private static List<String> names () {
+    	List<String> names = new ArrayList<String>();
+    	names.add("Elizabeth");
+    	names.add("Rahul");
+    	return names;
+    }
+
+}

@@ -11,8 +11,10 @@ export class EmployeeService {
   constructor(private http:HttpClient) { }
 
   getEmployeeList(): Observable<Employee[]>{
-   return this.http.get<Employee[]>(this.baseUrl + `all`);
+  // return this.http.get<Employee[]>(this.baseUrl + `all`);
+     return this.http.get<Employee[]>(this.baseUrl + `empByDept`);
   }
+  
 
   saveEmployee(employee:Employee): Observable<Employee> {
     return this.http.post<Employee>(this.baseUrl + `save`,employee);
@@ -21,6 +23,11 @@ export class EmployeeService {
   getEmployeeById(id:number): Observable<Employee>{
     return this.http.get<Employee>(this.baseUrl + `find/${id}`);
   }
+
+  getEmployeeByDeptId(id:number): Observable<Employee[]>{
+    return this.http.get<Employee[]>(this.baseUrl + `employeeByDept/${id}`);
+  }
+
 
   updateEmployee(employee:Employee): Observable<Object> {
     return this.http.put(this.baseUrl + `update`,employee);

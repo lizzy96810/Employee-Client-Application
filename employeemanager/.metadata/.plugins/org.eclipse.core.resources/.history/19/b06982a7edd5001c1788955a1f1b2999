@@ -1,0 +1,21 @@
+
+public class CodingChallengPrep {
+
+	public static void main(String[] args) {
+		fibbanci();
+
+	}
+	
+	private static void fibbanci() {
+		int[] fib = new int[10];
+		for(int i = 0; 0< fib.length; ++ i) {
+			if(i <2) {
+				fib[i] = 1;
+			} else {
+				fib [i] = fib[i-2] + fib [i-1];
+			}
+			System.out.println(fib[i]);
+		}
+	}
+
+}
